@@ -68,6 +68,19 @@ public class World {
 		}
 	}
 	
+	public void update() {
+		double n = (System.currentTimeMillis() * 0.001);
+		
+		for(int i = 0; i < vertexes.size(); i++) {
+			Vertex v = (Vertex) vertexes.get(i);
+			v.y = (float) Math.sin(
+					(n %
+							(Math.pow(v.x, 2) * Math.pow(v.z, 2)) // calculate the distance
+							)) + 4f;
+		
+		}
+	}
+	
 	public void render(Graphics g, int width, int height) {
 		
 		// transform every vertex

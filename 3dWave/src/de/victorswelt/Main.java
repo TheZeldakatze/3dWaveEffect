@@ -39,6 +39,7 @@ public class Main implements Runnable {
 			g.fillRect(0, 0, screen.getWidth(), screen.getHeight());
 			
 			// render the world
+			world.update();
 			world.render(g, screen.getWidth(), screen.getHeight());
 			
 			// draw the buffer
